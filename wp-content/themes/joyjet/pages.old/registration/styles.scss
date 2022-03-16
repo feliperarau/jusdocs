@@ -1,0 +1,12 @@
+@import "../../assets/scss/main";
+@import "../../assets/scss/auth-pages";
+
+// Components
+@import "../../components/Login/ForgotPasswordForm/";
+@import "../../components/Modal/";
+
+@import "../../components/Registration/Form/";
+
+// Shared design between login & registration are in _auth-pages.scss (.auth-page class).
+#registration-page {
+}

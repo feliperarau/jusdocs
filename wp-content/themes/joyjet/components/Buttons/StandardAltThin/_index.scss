@@ -1,0 +1,7 @@
+@import "../StandardAlt/";
+@import "../StandardThin/";
+
+._button-standard-alt-thin {
+  @extend ._button-standard-alt;
+  @extend ._button-standard-thin;
+}

@@ -1,0 +1,40 @@
+// Bootstrap
+@import "mixins";
+@import "functions";
+@import "variables";
+@import "bootstrap";
+@import "typography";
+@import "helpers";
+@import "components";
+
+// Additional imports
+@import "~animate.css/animate.min.css";
+
+body {
+  word-break: break-word;
+  padding-right: 0 !important;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+.image-frame {
+  border: 1px solid #c5c4c4;
+  border-radius: 4px;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:before {
+    vertical-align: baseline;
+  }
+  &.fw {
+    text-align: center;
+    width: 1.25em;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../Standard/";
+@import "../StandardAlt/";
+
+._button-standard-alt-outline {
+  @extend ._button-standard-alt;
+
+  &,
+  &._button-var {
+    background: none;
+    color: white;
+
+    &:hover {
+      background: $color-calma;
+      border-color: $color-calma;
+    }
+  }
+}

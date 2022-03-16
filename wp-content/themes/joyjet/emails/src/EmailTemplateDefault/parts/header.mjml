@@ -1,0 +1,14 @@
+<mjml>
+  <mj-body>
+    <mj-section css-class="inner-offset" padding="0">
+      <mj-column css-class="header-container" width="400px">
+          <mj-image
+            css-class="header-logo"
+            width="260px"
+            src="{{logo_url}}"
+          ></mj-image>
+        </div>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

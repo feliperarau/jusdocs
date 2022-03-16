@@ -1,0 +1,34 @@
+// Components
+@import "../NavMenu/";
+
+._header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 90;
+  height: 125px;
+  transition: 300ms height, 100ms background;
+
+  &.sticky {
+    background: $primary;
+    height: 96px;
+  }
+
+  &.menu-open {
+    background: $primary;
+    height: 125px;
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 160px;
+  }
+
+  .navbar {
+    padding: 0;
+    height: 100%;
+  }
+  .navbar-brand {
+    padding: 0;
+  }
+}

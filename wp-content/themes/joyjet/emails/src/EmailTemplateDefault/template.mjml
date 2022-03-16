@@ -1,0 +1,24 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Ubuntu"
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+    />
+  </mj-head>
+  <mj-body css-class="_joyjetemail-template background-primary">
+    <!-- Header-->
+    <mj-include path="./parts/header.mjml" />
+
+    <!-- Content -->
+    <mj-include path="./parts/content.mjml" />
+
+    <!-- Footer -->
+    <mj-include path="./parts/footer.mjml" />
+  </mj-body>
+</mjml>
+
+<mj-include
+  path="../../dist/EmailTemplateHDL/template.css"
+  type="css"
+  css-inline="inline"
+/>

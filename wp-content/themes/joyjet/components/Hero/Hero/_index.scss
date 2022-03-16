@@ -1,0 +1,48 @@
+._hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .hero-inner {
+    background-color: rgba(black, 0.5);
+    padding-top: 125px;
+
+    @media screen and (min-width: 992px) {
+      padding-top: 160px;
+    }
+  }
+  h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-family: Helvetica;
+    margin-bottom: 1.5rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 118px;
+      margin-bottom: 1rem;
+    }
+  }
+  .hero-text {
+    margin-bottom: 75px;
+    font-size: 18px;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 55px;
+    }
+  }
+  ._button {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 55px;
+    }
+  }
+
+  ._trending-bar {
+    display: none;
+
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+}

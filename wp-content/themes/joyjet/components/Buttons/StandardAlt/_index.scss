@@ -1,0 +1,20 @@
+@import "../Standard/";
+
+._button-standard-alt {
+  @extend ._button-standard;
+
+  &,
+  &._button-var {
+    $hover-color: darken($color-calma, 10%);
+
+    background-color: $color-calma;
+    border-color: $color-calma;
+    color: $calma-2;
+
+    &:hover {
+      color: $calma-2;
+      background: $hover-color;
+      border-color: $hover-color;
+    }
+  }
+}

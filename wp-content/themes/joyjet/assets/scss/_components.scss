@@ -1,0 +1,7 @@
+._dynamic-component {
+  transition: 300ms opacity;
+
+  &.updating {
+    opacity: 0.5;
+  }
+}

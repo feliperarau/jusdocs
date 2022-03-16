@@ -1,0 +1,17 @@
+@import "../Standard/";
+
+._button-standard-link {
+  @extend ._button-standard;
+
+  &._button-var {
+    background: none;
+    color: $calma-2;
+    border-color: transparent;
+
+    &:hover {
+      color: $calma-2;
+      background: none;
+      border-color: transparent;
+    }
+  }
+}
