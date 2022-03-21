@@ -1,0 +1,34 @@
+._post-entry {
+  border: 0;
+  border-radius: 8px;
+
+  .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+  }
+  .card-thumbnail {
+    a {
+      min-height: 310px;
+
+      display: flex;
+    }
+  }
+  .card-body {
+    padding: 30px 25px 50px;
+    background: #fff;
+
+    .card-title {
+      margin-bottom: 1em;
+      a {
+        font-weight: 400;
+        color: $title-color;
+        text-decoration: none;
+      }
+    }
+    .card-text {
+      color: $body-color;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<mjml>
+  <mj-button font-family="Helvetica" background-color="#f45e43" color="white">
+    Don't click me!
+  </mj-button>
+</mjml>
