@@ -19,9 +19,15 @@ class FrontPage extends FieldGroup {
 	public function __construct() {
         $this->set_fields(
             array(
-				'about_text' => new Fields\Textarea(
-                    __( 'Texto sobre', 'joyjet' ),
-                    array()
+				'about_tab'   => new Fields\Tab( __( 'About', 'joyjet' ) ),
+				'about_image' => new Fields\Image(
+                    __( 'Image', 'joyjet' ),
+                ),
+				'about_title' => new Fields\Text(
+                    __( 'Title', 'joyjet' ),
+                ),
+				'about_text'  => new Fields\Editor(
+                    __( 'Text', 'joyjet' ),
                 ),
 			)
 		);
@@ -29,11 +35,11 @@ class FrontPage extends FieldGroup {
 		$this->args = array(
 			'key'      => 'home-fields',
 			'title'    => 'Home',
-			'location' => array(
-				array(
+			'location' => [
+				[
 					Page::type_is_equal_to( 'front_page' ),
-				),
-			),
+				],
+			],
 		);
 	}
 }

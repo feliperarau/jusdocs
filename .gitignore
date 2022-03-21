@@ -34,7 +34,7 @@ wp-content/plugins/all-in-one-wp-migration/storage
 *.sql
 *.sqlite
 
- ignore log files and databases
+#ignore log files and databases
 *.log
 *.sql
 *.sqlite

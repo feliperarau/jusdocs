@@ -1,17 +1,17 @@
 @import "./scss/variables.scss";
 
 ._joyjetemail-template {
-  background-color: $color-calma;
-  font-family: "Ubuntu", sans-serif;
+  background-color: $color-primary;
+  font-family: "Poppins", sans-serif;
 
   a {
-    color: $color-calma;
+    color: $color-secondary;
     text-decoration: underline;
   }
   .button {
     td,
     a {
-      background: $color-disciplina !important;
+      background: $color-primary !important;
       border-radius: 40px !important;
     }
 
@@ -26,12 +26,6 @@
   .inner-offset {
     padding-right: 25px;
     padding-left: 25px;
-  }
-  .header-container {
-    //background-color: #fff;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: linear-gradient(270deg, #ecfd33 15.1%, #fabbde 78.12%);
   }
   .header-logo {
     background: #fff;
@@ -50,7 +44,7 @@
     div {
       font-size: 18px;
       line-height: 20px;
-      color: $color-secondary;
+      color: #fff;
     }
   }
 
@@ -60,7 +54,7 @@
     h1 {
       margin-top: 0;
       font-weight: 700;
-      color: $color-secondary-calma2;
+      color: $color-secondary;
       text-align: center;
       font-size: 32px;
       line-height: 36.77px;

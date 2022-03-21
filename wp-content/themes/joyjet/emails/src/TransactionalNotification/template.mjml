@@ -1,8 +1,8 @@
 <mjml>
   <mj-head>
     <mj-font
-      name="Ubuntu"
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700"
+      name="Poppins"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     ></mj-font>
     <mj-attributes>
       <mj-button background-color="#fff" />
@@ -10,13 +10,13 @@
   </mj-head>
   <mj-body css-class="_joyjetemail-template _joyjetnotification">
     <!-- Header-->
-    <mj-include path="../EmailTemplateHDL/parts/header.mjml" />
+    <mj-include path="../EmailTemplateDefault/parts/header.mjml" />
 
     <!-- Content -->
     <mj-include path="./parts/content.mjml" />
 
     <!-- Footer -->
-    <mj-include path="../EmailTemplateHDL/parts/footer.mjml" />
+    <mj-include path="../EmailTemplateDefault/parts/footer.mjml" />
   </mj-body>
 </mjml>
 

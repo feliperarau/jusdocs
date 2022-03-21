@@ -36,6 +36,11 @@ abstract class Page implements Renderable {
 	 * @param array $props
 	 */
 	public function __construct( $props = array() ) {
+		$slug = str_replace( '/template', '', $this->template);
+		$slug = str_replace( array( '/', '-'), '_', $slug);
+		$action = "jj_{$slug}_render";
+		$id = get_the_ID();
+
 		$this->props = array_merge( $this->props, $props );
 
 		$dynamic_props = $this->get_props();
@@ -43,7 +48,7 @@ abstract class Page implements Renderable {
 			$this->props = array_merge( $this->props, $dynamic_props );
 		}
 
-		do_action( 'joyjet_page_init', $this->props );
+		do_action( $action, $id, $this->props );
 	}
 
 	/**

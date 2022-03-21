@@ -10,7 +10,7 @@ namespace Theme\Components\Emails;
 /**
  * Handle template and props
  */
-class TransactionalNotification extends EmailTemplateHDL {
+class TransactionalNotification extends EmailTemplateDefault {
     /**
 	 * Email html template path relative to theme root
 	 *

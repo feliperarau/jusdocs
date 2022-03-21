@@ -18,7 +18,7 @@
 </mjml>
 
 <mj-include
-  path="../../dist/EmailTemplateHDL/template.css"
+  path="../../dist/EmailTemplateDefault/template.css"
   type="css"
   css-inline="inline"
 />

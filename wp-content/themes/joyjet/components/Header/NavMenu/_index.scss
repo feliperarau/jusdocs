@@ -8,18 +8,19 @@
     left: 0;
     right: 0;
     background: #4a90e2;
-
-    .navbar-nav {
-      height: calc(100vh - 125px);
-    }
   }
-  .menu-item-link {
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 300;
+  .navbar-nav {
+    gap: 30px;
+  }
+  .menu-item {
+    a {
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 300;
 
-    @media screen and (max-width: 992px) {
-      font-size: 20px;
+      @media screen and (max-width: 992px) {
+        font-size: 20px;
+      }
     }
   }
 }

@@ -11,12 +11,12 @@
   transition: 300ms height, 100ms background;
 
   &.sticky {
-    background: $primary;
+    background: $main-color;
     height: 96px;
   }
 
   &.menu-open {
-    background: $primary;
+    background: $main-color;
     height: 125px;
   }
 

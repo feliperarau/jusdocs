@@ -13,12 +13,22 @@
 body {
   word-break: break-word;
   padding-right: 0 !important;
+  background: #f8f8f8;
+  color: #8c94a8;
 }
 img {
   max-width: 100%;
 }
 a {
   text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3e4d60;
 }
 
 .image-frame {

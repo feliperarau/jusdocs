@@ -4,6 +4,7 @@ const fs = require("fs");
 const exec = require("child_process").exec;
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   context: __dirname,
@@ -63,7 +64,7 @@ module.exports = {
           mjmlCLI = mjmlTemplateCLI;
 
           if (fs.existsSync(partsFolder)) {
-            const partsFiles = fs.readdirSync(partsFolder).filter(function(x) {
+            const partsFiles = fs.readdirSync(partsFolder).filter(function (x) {
               return x !== ".DS_Store";
             });
 
@@ -108,6 +109,6 @@ module.exports = {
     ),
   ],
   optimization: {
-    minimizer: [new OptimizeCssAssetsPlugin()],
+    minimizer: [new CssMinimizerPlugin()],
   },
 };

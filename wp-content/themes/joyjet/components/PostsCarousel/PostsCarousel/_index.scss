@@ -1,0 +1,30 @@
+// Assets
+@import "~swiper/css";
+@import "~swiper/css/navigation";
+@import "~swiper/css/pagination";
+
+//Components
+@import "../../PostEntry/PostEntry";
+
+._posts-carousel {
+  .swiper-container {
+    position: relative;
+  }
+  .swiper-nav {
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    &.swiper-button-prev {
+      left: -40px;
+    }
+
+    &.swiper-button-next {
+      right: -40px;
+    }
+    .icon {
+      font-size: 32px;
+    }
+  }
+}

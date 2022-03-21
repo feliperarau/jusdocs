@@ -29,15 +29,17 @@ class ACF extends Hook {
 	}
 
 	/**
-	 * Hook into image acf field to return Image model instance
+	 * Hook into image acf field to return always the ID
 	 *
 	 * @param array  $value - acf original value.
 	 * @param [type] $post_id - post id.
 	 * @param [type] $field - field.
 	 * @return Image|array
 	 */
-	public function image_format_value( $value, $post_id, $field ) {
-		return is_array( $value ) ? Image::from_acf( $value ) : new Image();
+	public function image_format_value( $value, $post_id, $field ) : int {
+		$id = $value['id'] ?? 0;
+
+		return $id ? (int) $id : 0;
 	}
 
 	/**

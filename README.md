@@ -1,13 +1,13 @@
-# Programa Calmamente
+# Joyjet Template
 
-Repositório do código do Programa Calmamente em Docker
+Repositório do código do Template Joyjet em Docker
 
 # Getting Started
 
 - Verifique se você tem o Composer e o Node instalado na máquina e se os comandos funcionam no shell `composer -v` e `npm -v`
 - Derrube os containers em seu PC que estejam rodando na porta 80
 - Clone esse projeto
-- Vá para a pasta do tema `cd wp-content/themes/calmamente` e rode os comandos:
+- Vá para a pasta do tema `cd wp-content/themes/joyjet` e rode os comandos:
   - `composer install`;
   - `npm install`;
   - `npm run build`;

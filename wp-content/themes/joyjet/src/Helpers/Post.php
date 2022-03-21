@@ -7,6 +7,7 @@
 
 namespace Theme\Helpers;
 
+use stdClass;
 use Theme\Interfaces\Post as InterfacesPost;
 use Theme\Models\Image;
 
@@ -92,4 +93,18 @@ class Post {
 
 		return $casted_posts ?? (array) $interface;
 	}
+
+    /**
+     * Get attachment src
+     *
+     * @param int    $id
+     * @param string $size
+     *
+     * @return string
+     */
+    public static function get_attachment_image_src( $id, $size = 'medium' ) : string {
+        $thumbnail = wp_get_attachment_image_src( $id, $size )[0] ?? '';
+
+        return $thumbnail;
+    }
 }

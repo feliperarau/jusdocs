@@ -8,7 +8,9 @@
 namespace Theme\Pages;
 
 use Theme\Core\Page;
+use Theme\Helpers\Dev;
 use Theme\Helpers\Post;
+use Theme\Models\Post as ModelsPost;
 
 /**
  * Handle Page template and props
@@ -28,13 +30,11 @@ class Single extends Page {
 	 * @return array
 	 */
 	public function get_props(): array {
-		$id = get_the_ID();
-
-		do_action( 'jj_single_render', $id );
+		$post = ModelsPost::from_current_post();
 
 		return array(
-			'title'   => get_the_title(),
-			'content' => Post::get_the_content(),
+			'title'   => $post->title,
+			'content' => $post->content,
 		);
 	}
 }
