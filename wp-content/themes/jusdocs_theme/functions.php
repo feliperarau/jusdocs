@@ -64,3 +64,7 @@ if ( function_exists('register_sidebar') ) {
     register_sidebar($sidebar1);
 
 }
+
+include('shortcode.php');
+
+include('shortcode_api.php');
