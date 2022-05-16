@@ -51,19 +51,19 @@ new Boilerplate(
 
 /* Add Multiple sidebar
 */
-if ( function_exists('register_sidebar') ) {
-    $sidebar1 = array(
-        'before_widget'  => '<div class="widget %2$s">',
-        'after_widget'   => '</div>',
-        'before_title'   => '<h2 class="widgettitle">',
-        'after_title'    => '</h2>',
-        'name'           =>__( 'Main Sidebar', 'jusdocs' ),
-    );
+// if ( function_exists('register_sidebar') ) {
+//     $sidebar1 = array(
+//         'before_widget'  => '<div class="widget %2$s">',
+//         'after_widget'   => '</div>',
+//         'before_title'   => '<h2 class="widgettitle">',
+//         'after_title'    => '</h2>',
+//         'name'           =>__( 'Main Sidebar', 'jusdocs' ),
+//     );
 
 
-    register_sidebar($sidebar1);
+//     register_sidebar($sidebar1);
 
-}
+// }
 
 include('shortcode.php');
 
