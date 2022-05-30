@@ -1,0 +1,22 @@
+:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) [data-animate], :root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .slider [data-animate] {
+    opacity: 1;
+}
+:root:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) .slider:not(.flickity-enabled)>* {
+    display: flex;
+   
+}
+[data-animate="flipInY"], .slider [data-animate="flipInY"] {
+    -webkit-transform: unset;
+    transform: unset;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.banner-bg-hide{
+	visibility: hidden;
+}
+.banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 25%;       
+}

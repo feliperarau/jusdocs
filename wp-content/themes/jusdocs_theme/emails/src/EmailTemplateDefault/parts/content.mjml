@@ -1,0 +1,39 @@
+<mjml>
+  <mj-body>
+    <mj-section padding-top="80px" padding-bottom="80px">
+      <mj-column>
+        <mj-text
+          css-class="welcome body-text"
+          font-weight="bold"
+          font-size="40px"
+          font-family="Ubuntu, sans-serif"
+          padding="0"
+        >
+          <p>Small Heading</p>
+        </mj-text>
+        <mj-text
+          css-class="user-name body-text"
+          font-weight="bold"
+          font-size="64px"
+          font-family="Ubuntu, sans-serif"
+          padding="0"
+        >
+          <p>Big Heading</p>
+        </mj-text>
+        <mj-text
+          css-class="user-name body-text"
+          font-weight="bold"
+          font-size="18px"
+          font-family="Ubuntu, sans-serif"
+        >
+          <p>
+            Isn't it true that you have been paid for your testimony? I guess if
+            you want children beaten, you have to do it yourself. You've killed
+            me! Oh, you've killed me! Say it in Russian! You are the last hope
+            of the universe.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

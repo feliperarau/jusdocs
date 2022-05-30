@@ -1,0 +1,34 @@
+/**
+ * MainSidebar Sidebar Component styles
+ */
+
+._main-sidebar {
+  @include media-breakpoint-down("lg") {
+    margin-bottom: 40px;
+  }
+  &.full-height {
+    @include media-breakpoint-up("lg") {
+      margin-top: -$site-content-padding-top - $header-gradient-height;
+      min-height: calc(100vh + 80px);
+      position: relative;
+      z-index: 5;
+      margin-bottom: -$site-content-padding-bottom - $footer-height-desktop;
+    }
+  }
+  &.footer-default {
+    @include media-breakpoint-up("lg") {
+      margin-bottom: -$site-content-padding-bottom;
+    }
+  }
+
+  .inner {
+    border-radius: 20px;
+    padding: 25px;
+    padding-top: $header-gradient-height;
+    box-shadow: 5px 0px 10px rgba(black, 0.2);
+
+    @include media-breakpoint-up("lg") {
+      border-radius: 0;
+    }
+  }
+}

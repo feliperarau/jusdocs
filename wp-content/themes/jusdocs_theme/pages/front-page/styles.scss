@@ -1,0 +1,18 @@
+// Assets
+@import "../../assets/scss/main";
+
+// Components
+@import "../../components/Header/Header/";
+@import "../../components/Hero/Hero/";
+@import "../../components/PostsCarousel/PostsCarousel";
+@import "../../components/About/HomeCard";
+@import "../../components/Footer/Footer/";
+
+#front-page {
+  .home-splash {
+    margin-bottom: 95px;
+  }
+  .home-posts {
+    margin-bottom: 95px;
+  }
+}

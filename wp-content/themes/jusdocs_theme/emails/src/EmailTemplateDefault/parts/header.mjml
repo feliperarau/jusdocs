@@ -1,0 +1,20 @@
+<mjml>
+  <mj-body>
+    <mj-section css-class="inner-offset" padding="0">
+      <mj-column css-class="header-container" width="400px">
+        <mj-text
+          css-class="header-logo"
+          font-weight="bold"
+          font-size="40px"
+          font-family="Ubuntu, sans-serif"
+          padding="0"
+          color="#647883"
+           align="center"
+        >
+        Logo
+        </mj-text>
+        </div>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
