@@ -12,28 +12,30 @@ function getWebpackEntries() {
     vendor: ["./assets/js/vendor.js"],
   };
 
-  const pageFiles = fs.readdirSync(pagesDirectoryPath);
+  if (fs.existsSync(pagesDirectoryPath)) {
+    const pageFiles = fs.readdirSync(pagesDirectoryPath);
 
-  pageFiles.forEach(function(page) {
-    const jsPath = path.join(__dirname, "pages", page, "scripts.js");
+    pageFiles.forEach(function (page) {
+      const jsPath = path.join(__dirname, "pages", page, "scripts.js");
 
-    if (fs.existsSync(jsPath)) {
-      if (typeof assets[page] === "undefined") {
-        assets[page] = [];
+      if (fs.existsSync(jsPath)) {
+        if (typeof assets[page] === "undefined") {
+          assets[page] = [];
+        }
+
+        assets[page].push(`./pages/${page}/scripts.js`);
       }
 
-      assets[page].push(`./pages/${page}/scripts.js`);
-    }
+      const cssPath = path.join(__dirname, "pages", page, "styles.scss");
+      if (fs.existsSync(cssPath)) {
+        if (typeof assets[page] === "undefined") {
+          assets[page] = [];
+        }
 
-    const cssPath = path.join(__dirname, "pages", page, "styles.scss");
-    if (fs.existsSync(cssPath)) {
-      if (typeof assets[page] === "undefined") {
-        assets[page] = [];
+        assets[page].push(`./pages/${page}/styles.scss`);
       }
-
-      assets[page].push(`./pages/${page}/styles.scss`);
-    }
-  });
+    });
+  }
   /**
    * Admin Assets
    */

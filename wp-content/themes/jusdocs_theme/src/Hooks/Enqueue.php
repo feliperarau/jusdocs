@@ -62,7 +62,7 @@ class Enqueue extends Hook {
 	 * @return void
 	 */
 	public function enqueue_template_scripts(): void {
-		$template_name = $this->get_template_name();
+		$template_name = 'global';
 
 		if ( ! $template_name ) {
 			return;
