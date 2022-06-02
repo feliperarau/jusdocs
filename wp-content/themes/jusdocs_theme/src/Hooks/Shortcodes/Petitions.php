@@ -70,18 +70,24 @@ class Petitions extends Hook {
             $api_endpoint
         );
 
-		$request = wp_remote_get( $request_url );
+        $petitions = get_transient( 'jusdocs_latest_petitions' );
 
-		if ( is_wp_error( $request ) ) {
-			return false; // Bail early
-		}
+        if ( false === $petitions ) {
+            $response = wp_remote_get( $request_url );
 
-		$body = wp_remote_retrieve_body( $request );
-		$data = json_decode( $body );
+            if ( is_wp_error( $response ) ) {
+                return false; // Bail early
+            }
 
-		if ( empty( $data ) ) {
-			return;
-		}
+            $body      = wp_remote_retrieve_body( $response );
+            $petitions = json_decode( $body );
+
+            set_transient( 'jusdocs_latest_petitions', $petitions, 1 * HOUR_IN_SECONDS );
+        }
+
+		if ( empty( $petitions ) ) {
+            return;
+        }
 
 		ob_start();
 
@@ -89,7 +95,7 @@ class Petitions extends Hook {
             <div class="petitions-container">
         HTML;
 
-		foreach ( $data->items as $item ) :
+		foreach ( $petitions->items as $item ) :
 			$dt = new \DateTime( $item->updated_at, wp_timezone() );
 
 			$author       = $item->author ?? [];
