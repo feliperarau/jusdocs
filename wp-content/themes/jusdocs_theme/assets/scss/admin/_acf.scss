@@ -1,0 +1,27 @@
+.acf-date-time-picker,
+.acf-date-picker {
+  &.acf-input-wrap {
+    position: relative;
+    &:after {
+      content: "\f508";
+      font-family: "dashicons";
+      position: absolute;
+      color: $icon-color;
+      left: 5px;
+      font-size: 20px;
+      top: 0;
+      bottom: 0;
+      line-height: 1;
+      margin: auto 0;
+      height: 22px;
+      pointer-events: none;
+      transition: 300ms all;
+    }
+    &:hover:after {
+      color: $wp-color;
+    }
+    input {
+      padding-left: 30px !important;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+._forgot-password-form {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 335px;
+  }
+}
