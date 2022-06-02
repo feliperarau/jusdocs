@@ -15,7 +15,7 @@ Repositório do código do Template Jusdocs em Docker
 - Algumas informações serão postadas na tela, sente e tome um café pois o WP está sendo configurado e os plugins instalados
 - Se tudo ocorreu como o esperado, você já pode acessar a área administrativa WP do projeto em `http://localhost/wp-admin`
 
-- A partir daqui, para continuar será necessário importar a imagem do DB de ambiente DEV no formato `.wpress` para que o projeto rode. Caso você ainda não tenha este arquivo, deverá solicitar ao <b>Eder Silva</b> ou outro administrador do projeto.
+- A partir daqui, para continuar será necessário importar a imagem do DB de ambiente DEV no formato `.wpress` para que o projeto rode. Caso você ainda não tenha este arquivo, deverá solicitar ao <b>Felipe Araujo</b> ou outro administrador do projeto.
 - Com o arquivo `.wpress` em mãos, faça login no wp-admin, e no menu lateral procure o submenu do plugin `WP All import` e clique na opção `Import`. Faça o upload do arquivo de imagem e aguarde até a conclusão.
 
 > Você deve saber que seus dados de acesso ao admin se encontram no `.env`
