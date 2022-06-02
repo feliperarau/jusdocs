@@ -52,51 +52,6 @@ abstract class Model {
 		return $instances;
 	}
 
-	/**
-	 * Build from wp query results
-	 *
-	 * @param WP_Query $query_results
-	 *
-	 * @return array
-	 */
-	public static function from_wp_query( WP_Query $query_results ) : array {
-		$posts = array();
-        $child = get_called_class();
-
-		if ( isset( $query_results->posts ) ) {
-			$posts = array_map(
-				function( $post ) use ( $child ) {
-					$course_obj            = $child::from_post( $post );
-					$course_obj->user_data = UserCourse::from_course( $course_obj );
-
-					return $course_obj;
-				},
-                $query_results->posts
-            );
-		}
-
-		return $posts;
-	}
-
-	/**
-	 * Get post terms IDs
-	 *
-	 * @param mixed  $post
-	 * @param string $taxonomy
-	 *
-	 * @return array int[]
-	 */
-	public static function get_post_terms( $post, $taxonomy ) : array {
-		$terms = get_the_terms( $post, $taxonomy );
-		$terms = ! empty( $terms ) && ! $terms instanceof WP_Error ? (array) $terms : array();
-
-		$term_ids = wp_list_pluck( $terms, 'term_id' );
-
-		$ids_array = Utils::sanitize_ids_array( $term_ids );
-
-		return $ids_array;
-	}
-
     /**
      * Generate Instance
      *

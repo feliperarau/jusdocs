@@ -25,15 +25,15 @@ $registrable_namespaces = array_merge(
 	array(
 		'Hooks',
 		'Hooks\Shortcodes',
-		'Endpoints',
+		// 'Endpoints',
 	)
 );
 
 // Check if ACF plugin is active to register fields
-if ( function_exists( 'acf_add_local_field_group' ) ) {
-	$registrable_namespaces[] = 'FieldsGroups';
-	$registrable_namespaces[] = 'Options';
-}
+// if ( function_exists( 'acf_add_local_field_group' ) ) {
+	// $registrable_namespaces[] = 'FieldsGroups';
+	// $registrable_namespaces[] = 'Options';
+// }
 
 
 // Setup a theme instance for SolidPress
@@ -45,5 +45,3 @@ new Boilerplate(
 		'registrable_namespaces' => $registrable_namespaces,
 	)
 );
-
-require 'shortcode_api.php';

@@ -2,11 +2,7 @@
 
 namespace Theme\Hooks;
 
-use Theme\Components;
 use SolidPress\Core\Hook;
-use Theme\Helpers\User;
-use Theme\Helpers\Utils;
-
 /**
  * Init theme
  */
@@ -20,8 +16,6 @@ class Theme extends Hook {
 		$this->add_filter( 'body_class', 'add_classes_to_body' );
 		$this->add_action( 'wp_head', 'add_pingback_url_header' );
 		$this->add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-		$this->add_action( 'init', 'session_start' );
-		$this->add_filter( 'wp_mail_content_type', 'wp_mail_content_type' );
 	}
 
 	/**
@@ -96,25 +90,5 @@ class Theme extends Hook {
 		if ( is_singular() && pings_open() ) {
 			echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 		}
-	}
-
-	/**
-	 * Starts PHP session
-	 *
-	 * @return void
-	 */
-	public function session_start(): void {
-		if ( ! session_id() ) {
-			session_start();
-		}
-	}
-
-	/**
-	 * Set platform emails to HTML type
-	 *
-	 * @return string
-	 */
-	public function wp_mail_content_type() {
-		return 'text/html';
 	}
 }
