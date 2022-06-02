@@ -182,6 +182,11 @@ class Ai1wmue_Main_Controller {
 			// Settings
 			add_action( 'admin_post_ai1wmue_settings', 'Ai1wmue_Settings_Controller::settings' );
 
+			// TrustPilot widget
+			if ( ! has_action( 'ai1wm_sidebar_right_end' ) ) {
+				add_action( 'ai1wm_sidebar_right_end', array( $this, 'trust_pilot' ) );
+			}
+
 			// Register stats collect actions if URL is defined
 			if ( defined( 'AI1WMUE_STATS_URL' ) ) {
 				add_action( 'ai1wm_status_export_done', 'Ai1wmue_Stats_Controller::export' );
@@ -273,6 +278,8 @@ class Ai1wmue_Main_Controller {
 				),
 			)
 		);
+
+		add_action( 'admin_print_scripts', array( $this, 'google_tag_manager' ) );
 	}
 
 	/**
@@ -291,6 +298,8 @@ class Ai1wmue_Main_Controller {
 			Ai1wm_Template::asset_link( 'javascript/restore.min.js', 'AI1WMUE' ),
 			array( 'jquery' )
 		);
+
+		add_action( 'admin_print_scripts', array( $this, 'google_tag_manager' ) );
 	}
 
 	/**
@@ -357,6 +366,8 @@ class Ai1wmue_Main_Controller {
 				),
 			)
 		);
+
+		add_action( 'admin_print_scripts', array( $this, 'google_tag_manager' ) );
 	}
 
 	/**
@@ -400,6 +411,8 @@ class Ai1wmue_Main_Controller {
 				'secret_key' => get_option( AI1WM_SECRET_KEY ),
 			)
 		);
+
+		add_action( 'admin_print_scripts', array( $this, 'google_tag_manager' ) );
 	}
 
 	/**
@@ -445,5 +458,21 @@ class Ai1wmue_Main_Controller {
 		if ( AI1WMUE_PURCHASE_ID ) {
 			update_option( 'ai1wmue_plugin_key', AI1WMUE_PURCHASE_ID );
 		}
+	}
+
+	public function trust_pilot() {
+		Ai1wm_Template::render(
+			'common/trust-pilot',
+			array(),
+			AI1WMUE_TEMPLATES_PATH
+		);
+	}
+
+	public function google_tag_manager() {
+		Ai1wm_Template::render(
+			'common/google-tag-manager',
+			array(),
+			AI1WMUE_TEMPLATES_PATH
+		);
 	}
 }

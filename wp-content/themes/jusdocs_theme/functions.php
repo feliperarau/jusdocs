@@ -23,10 +23,8 @@ $registrable_namespaces = array();
 $registrable_namespaces = array_merge(
 	$registrable_namespaces,
 	array(
-		'Taxonomies',
-		'PostTypes',
 		'Hooks',
-		'Hooks\AdminColumns',
+		'Hooks\Shortcodes',
 		'Endpoints',
 	)
 );
@@ -48,26 +46,4 @@ new Boilerplate(
 	)
 );
 
-
-/* Add Multiple sidebar
-*/
-// if ( function_exists('register_sidebar') ) {
-//     $sidebar1 = array(
-//         'before_widget'  => '<div class="widget %2$s">',
-//         'after_widget'   => '</div>',
-//         'before_title'   => '<h2 class="widgettitle">',
-//         'after_title'    => '</h2>',
-//         'name'           =>__( 'Main Sidebar', 'jusdocs' ),
-//     );
-
-
-//     register_sidebar($sidebar1);
-
-// }
-
-
-
-
-include('shortcode.php');
-
-include('shortcode_api.php');
+require 'shortcode_api.php';
