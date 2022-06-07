@@ -1,0 +1,63 @@
+commentmeta:w:w
+comments:w:w
+links:w:w
+options:w:w
+postmeta:w:w
+posts:w:w
+term_relationships:w:w
+term_taxonomy:w:w
+termmeta:w:w
+terms:w:w
+usermeta:w:w
+users:w:w
+queue:w:w
+stream:w:w
+newsletter:wysija-newsletters-backup:p
+wysija_campaign:wysija-newsletters-backup:p
+wysija_list:wysija-newsletters-backup:p
+pmxi_posts:wp-all-import:p
+stream_context:wp-all-import:p
+csp_email_templates:all-in-one-wp-migration (84.21%):p
+csp_options_categories:advanced-database-cleaner (86.36%):p
+csp_subscribers:wysija-newsletters-backup (80%):p
+failed_jobs:wp-all-import (63.64%):p
+groups_rs:js_composer (77.78%):p
+knewskeys: (44.44%):w
+knewsletters:wysija-newsletters-backup (91.67%):p
+knewstats: (44.44%):w
+knewsubmits: (36.36%):w
+lgp_linking:amp (81.82%):p
+lgp_log:wp-all-import (42.86%):p
+lgp_posts:wysija-newsletters-backup (77.78%):p
+newsletter_emails:wysija-newsletters-backup (64.71%):p
+newsletter_stats:wysija-newsletters-backup (75%):p
+pdfex_template: (78.57%):w
+pmxi_files:wp-all-import (90%):p
+pmxi_history:wp-all-import:p
+pmxi_imports:wp-all-import (91.67%):p
+pmxi_templates:wp-all-import (92.86%):p
+pollsa:amp (83.33%):p
+pollsip:amp (71.43%):p
+pollsq:amp (83.33%):p
+popover: (71.43%):w
+popularpostsdata:advanced-database-cleaner-pro (43.75%):p
+pty_filters: (81.82%):w
+pty_imps: (62.5%):w
+pty_popups: (60%):w
+pty_stats: (77.78%):w
+role_scope_rs: (38.46%):w
+stream_meta: (81.82%):w
+wpo_log: (42.86%):w
+wysija_campaign_list:wysija-newsletters-backup (75%):p
+wysija_custom_field:wysija-newsletters-backup (42.11%):p
+wysija_email:wysija-newsletters-backup (66.67%):p
+wysija_email_user_stat:wysija-newsletters-backup (36.36%):p
+wysija_email_user_url:wysija-newsletters-backup (38.1%):p
+wysija_form:wysija-newsletters-backup (72.73%):p
+wysija_queue:wysija-newsletters-backup (58.33%):p
+wysija_url:wysija-newsletters-backup (70%):p
+wysija_url_mail:wysija-newsletters-backup (46.67%):p
+wysija_user:wysija-newsletters-backup (63.64%):p
+wysija_user_field:wysija-newsletters-backup (41.18%):p
+wysija_user_history:wysija-newsletters-backup (36.84%):p
+wysija_user_list:wysija-newsletters-backup (43.75%):p

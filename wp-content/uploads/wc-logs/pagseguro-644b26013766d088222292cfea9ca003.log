@@ -1,0 +1,81 @@
+09-01-2015 @ 10:04:07 - Requesting token for order 89144 with the following data: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<checkout>
+  <currency>BRL</currency>
+  <reference><![CDATA[WC-89144]]></reference>
+  <sender>
+    <name><![CDATA[Renan Oliveira]]></name>
+    <email><![CDATA[teste@gmail.com]]></email>
+  </sender>
+  <shipping>
+    <type>3</type>
+    <cost>0</cost>
+  </shipping>
+  <items>
+    <item>
+      <id>1</id>
+      <description><![CDATA[Pacote de modelos trabalhistas do Consultor Trabalhista]]></description>
+      <amount>129.00</amount>
+      <quantity>1</quantity>
+    </item>
+  </items>
+  <redirectURL><![CDATA[https://consultortrabalhista.com/finalizar-compra/order-received/89144?key=wc_order_55e5a245df766]]></redirectURL>
+  <notificationURL><![CDATA[https://consultortrabalhista.com/wc-api/WC_PagSeguro_Gateway/]]></notificationURL>
+  <maxUses>1</maxUses>
+  <maxAge>120</maxAge>
+</checkout>
+
+09-01-2015 @ 10:04:09 - PagSeguro Payment Token created with success! The Token is: EE1504DDBFBF169334118FB8E586F51D
+09-01-2015 @ 10:05:49 - Requesting token for order 89145 with the following data: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<checkout>
+  <currency>BRL</currency>
+  <reference><![CDATA[WC-89145]]></reference>
+  <sender>
+    <name><![CDATA[Renan Oliveira]]></name>
+    <email><![CDATA[teste@gmail.com]]></email>
+  </sender>
+  <shipping>
+    <type>3</type>
+    <cost>0</cost>
+  </shipping>
+  <items>
+    <item>
+      <id>1</id>
+      <description><![CDATA[Pacote de modelos trabalhistas do Consultor Trabalhista]]></description>
+      <amount>129.00</amount>
+      <quantity>1</quantity>
+    </item>
+  </items>
+  <redirectURL><![CDATA[https://consultortrabalhista.com/finalizar-compra/order-received/89145?key=wc_order_55e5a2ab0d47c]]></redirectURL>
+  <notificationURL><![CDATA[https://consultortrabalhista.com/wc-api/WC_PagSeguro_Gateway/]]></notificationURL>
+  <maxUses>1</maxUses>
+  <maxAge>120</maxAge>
+</checkout>
+
+09-01-2015 @ 10:05:50 - Invalid token and/or email settings!
+09-01-2015 @ 10:07:15 - Requesting token for order 89145 with the following data: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<checkout>
+  <currency>BRL</currency>
+  <reference><![CDATA[WC-89145]]></reference>
+  <sender>
+    <name><![CDATA[Renan Oliveira]]></name>
+    <email><![CDATA[teste@gmail.com]]></email>
+  </sender>
+  <shipping>
+    <type>3</type>
+    <cost>0</cost>
+  </shipping>
+  <items>
+    <item>
+      <id>1</id>
+      <description><![CDATA[Pacote de modelos trabalhistas do Consultor Trabalhista]]></description>
+      <amount>129.00</amount>
+      <quantity>1</quantity>
+    </item>
+  </items>
+  <redirectURL><![CDATA[https://consultortrabalhista.com/finalizar-compra/order-received/89145?key=wc_order_55e5a2ab0d47c]]></redirectURL>
+  <notificationURL><![CDATA[https://consultortrabalhista.com/wc-api/WC_PagSeguro_Gateway/]]></notificationURL>
+  <maxUses>1</maxUses>
+  <maxAge>120</maxAge>
+</checkout>
+
+09-01-2015 @ 10:07:16 - PagSeguro Payment Token created with success! The Token is: CB3B878A57577C3334F37F91DC2B9EFF

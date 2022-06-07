@@ -1,0 +1,6 @@
+# BEGIN Role Scoper
+
+# END Role Scoper
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^https?://(.+\.)?consultortrabalhista\.com/ [NC]
+RewriteRule .*\.(zip|rar|doc|docx|pdf|xls|xlsm)$ https://consultortrabalhista.com/assine  [L]
