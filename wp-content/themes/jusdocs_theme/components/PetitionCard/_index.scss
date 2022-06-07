@@ -1,7 +1,10 @@
 ._petition-card {
+  display: flex;
+
   .card {
+    flex: 1;
     border-radius: 4px;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
     .header,
     .meta,

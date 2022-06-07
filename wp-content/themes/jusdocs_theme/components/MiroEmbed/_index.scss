@@ -1,0 +1,74 @@
+._miro-embed {
+  margin-bottom: 1rem;
+
+  .main-frame {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .toggle-wrapper {
+    text-align: center;
+  }
+  .toggle-modal {
+    color: #fff;
+    border-color: var(--e-global-color-secondary);
+    background-color: var(--e-global-color-secondary);
+    border-radius: 8px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 18px;
+  }
+
+  .modal-dialog {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 100%;
+
+    .modal-content {
+      background: none;
+      border: 0;
+    }
+    .modal-header {
+      border-bottom: 0;
+
+      .btn-close {
+        background: none;
+        color: #fff;
+        opacity: 1;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        transition: 200ms all;
+
+        &:hover {
+          color: var(--e-global-color-secondary);
+        }
+
+        .icon {
+          line-height: 1;
+          display: block;
+
+          &:before {
+            display: block;
+          }
+        }
+      }
+    }
+    .modal-body {
+      padding: 0;
+
+      .modal-frame {
+        display: block;
+        border-radius: 4px;
+        background: #fff;
+      }
+    }
+  }
+}

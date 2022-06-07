@@ -3,5 +3,5 @@ import "../../assets/js/main";
 import "../../assets/fonts/icons.font";
 
 // Components
-import "../../components/PetitionsGrid/";
-import "../../components/MiroEmbed/";
+import "../../components/PetitionsGrid";
+import "../../components/MiroEmbed";

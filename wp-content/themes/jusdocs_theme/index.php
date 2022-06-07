@@ -8,9 +8,5 @@
  */
 
 use Theme\Pages;
-
-echo new Pages\AuthenticatedPage(
-    array(
-		'page' => new Pages\Index(),
-    )
-);
+get_header();
+get_footer();
