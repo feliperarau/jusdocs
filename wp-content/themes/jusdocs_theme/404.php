@@ -8,7 +8,5 @@
  */
 
 get_header();
-
-echo new Theme\Pages\PageNotFound();
-
+the_content();
 get_footer();
