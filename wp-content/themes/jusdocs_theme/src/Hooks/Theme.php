@@ -16,6 +16,7 @@ class Theme extends Hook {
 		$this->add_filter( 'body_class', 'add_classes_to_body' );
 		$this->add_action( 'wp_head', 'add_pingback_url_header' );
 		$this->add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+		$this->add_filter( 'elementor/utils/get_the_archive_title', 'archive_title' );
 	}
 
 	/**
@@ -90,5 +91,27 @@ class Theme extends Hook {
 		if ( is_singular() && pings_open() ) {
 			echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 		}
+	}
+
+	/**
+	 * Change archive title
+	 *
+	 * @param mixed $title
+	 *
+	 * @return string
+	 */
+	public function archive_title( $title ) : string {
+		if ( is_search() ) {
+			/* translators: %s: Search term. */
+			$title  = __( 'Você pesquisou por: ', 'jusdocs' );
+			$title .= get_search_query();
+
+			if ( get_query_var( 'paged' ) ) {
+				/* translators: %s is the page number. */
+				$title .= sprintf( __( '&nbsp;&ndash; Página %s', 'jusdocs' ), get_query_var( 'paged' ) );
+			}
+		}
+
+		return $title;
 	}
 }

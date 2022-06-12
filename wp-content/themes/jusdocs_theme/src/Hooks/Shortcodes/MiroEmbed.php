@@ -31,12 +31,13 @@ class MiroEmbed extends Hook {
 	 */
     public function shortcode_content( $attrs ) {
         $default = array(
-            'board_id' => '',
+            'board' => '',
+            'frame' => '',
         );
 
         $params = shortcode_atts( $default, $attrs );
 
-        if ( $params['board_id'] ) {
+        if ( $params['board'] ) {
             $embed = new Components\MiroEmbed( $params );
         }
 

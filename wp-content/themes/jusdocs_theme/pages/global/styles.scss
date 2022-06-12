@@ -5,3 +5,137 @@
 
 @import "../../components/PetitionsGrid/";
 @import "../../components/MiroEmbed/";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.elementor-pagination {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+.page-numbers {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: #d81f2a;
+    border-radius: 4px;
+  }
+  &.prev,
+  &.next {
+    border: 1px solid #d81f2a;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &.current {
+    background: #d81f2a;
+    border: 1px solid #d81f2a;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#breadcrumb {
+  font-family: "Roboto";
+  font-size: 12px;
+  color: #667085;
+
+  a {
+    color: #667085;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+#post-grid,
+#archive-grid {
+  .elementor-post__thumbnail {
+    height: 200px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .elementor-post__thumbnail__link {
+    margin-bottom: 8px;
+  }
+  .elementor-post__card {
+    background-color: #fafafa;
+  }
+}
+
+#archive-grid {
+  article {
+    &:nth-child(1) {
+      @include media-breakpoint-up(lg) {
+        grid-column: span 3;
+
+        .elementor-post__card {
+          flex-direction: row;
+          background: transparent;
+          padding: 0;
+          margin: 0;
+          justify-content: center;
+          align-items: center;
+          box-shadow: non;
+        }
+        .elementor-post__thumbnail__link {
+          max-width: 280px;
+          margin-bottom: 0px;
+        }
+        .elementor-post__meta-data {
+          display: none;
+        }
+        .elementor-post__thumbnail {
+          height: 274px;
+          max-width: 280px;
+        }
+      }
+    }
+  }
+}
+.elementor-post__card {
+  .elementor-post__read-more {
+    text-align: right;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .elementor-post__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
+
+.elementor-post-author:before {
+  content: "Publicado por: ";
+}
+
+#Artigos .elementor-divider-separator {
+  border-color: #d81f2a;
+}
+#Roteiros .elementor-divider-separator {
+  border-color: #094253;
+}

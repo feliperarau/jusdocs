@@ -285,4 +285,19 @@ class Utils {
 			);
 		}
 	}
+
+	/**
+	 * Check if is AMP version
+	 *
+	 * @return boolean
+	 */
+	public static function is_amp() {
+		$amp = false;
+
+		if ( function_exists( 'ampforwp_is_amp_endpoint' ) && ampforwp_is_amp_endpoint() ) {
+			$amp = true;
+		}
+
+		return $amp;
+	}
 }

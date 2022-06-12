@@ -30,6 +30,13 @@ class Petitions extends Hook {
 	 * @return string
 	 */
 	public function shortcode_content( $attrs ) {
+		$params = shortcode_atts(
+            array(
+				'number' => 3,
+            ),
+            $attrs
+        );
+
         $api_endpoint = 'https://api.jusdocs.com/api/v2/petitions';
         $request_url  = add_query_arg(
             [
@@ -59,7 +66,12 @@ class Petitions extends Hook {
             return;
         }
 
-        $petitions = new Components\PetitionsGrid( [ 'petitions' => $petitions->items ?? [] ] );
+        $petitions = new Components\PetitionsGrid(
+            [
+				'petitions' => $petitions->items ?? [],
+				'number'    => $params['number'],
+			]
+        );
 
         return $petitions;
 	}

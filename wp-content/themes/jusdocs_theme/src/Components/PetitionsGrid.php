@@ -29,6 +29,7 @@ class PetitionsGrid extends Component {
 	public $props = [
 		'class'     => '',
 		'petitions' => [],
+		'number'    => 3,
 	];
 
 	/**
@@ -38,6 +39,12 @@ class PetitionsGrid extends Component {
 	 */
 	public function get_props(): array {
         $petitions = (array) $this->props['petitions'];
+		$pet_numb  = count( $petitions );
+		$limit     = (int) $this->props['number'];
+
+		if ( $pet_numb > $limit ) {
+			$petitions = array_slice( $petitions, 0, $limit );
+		}
 
 		return [
 			'petitions' => $petitions,

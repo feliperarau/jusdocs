@@ -4,9 +4,10 @@
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 30px;
 
   @media screen and (min-width: 768px) {
+    gap: 16px;
     flex-direction: row;
   }
 

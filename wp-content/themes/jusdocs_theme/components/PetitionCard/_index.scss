@@ -1,25 +1,60 @@
 ._petition-card {
   display: flex;
 
+  .name {
+    margin-bottom: 20px;
+    line-height: 1.1;
+    align-items: center;
+    gap: 18px;
+
+    .user-name {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .subtitle {
+      font-style: italic;
+      font-size: 12px;
+      font-weight: 300;
+      color: #808080;
+    }
+  }
   .card {
+    border: 0;
     flex: 1;
+    display: flex;
+    flex-direction: column;
     border-radius: 4px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
-    .header,
-    .meta,
-    .info {
-      display: flex;
+    .header {
       padding: 16px 16px 0 16px;
+    }
+
+    .name {
+      display: flex;
     }
 
     .meta,
     .info {
       justify-content: space-between;
     }
+  }
 
-    .info {
-      padding-bottom: 16px;
+  .info {
+    padding: 16px;
+    display: flex;
+    font-size: 12px;
+
+    .left,
+    .right {
+      //flex: 1;
+      max-width: 50%;
+    }
+
+    .pet-type {
+      font-weight: bold;
+      color: black;
     }
   }
 
@@ -29,14 +64,9 @@
     border-radius: 100%;
     background: #808080;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
-    margin-right: 12px;
-  }
-  span {
-    display: block;
-    font-size: 14px;
-    color: #808080;
   }
   p {
     margin-bottom: 0;
@@ -44,10 +74,37 @@
   .title {
     padding: 16px;
     background-color: #fbfbfb;
+    flex: 1;
+
+    h4 {
+      margin-bottom: 0;
+
+      a {
+        display: block;
+        font-size: 18px;
+        color: #000000;
+        line-height: 26px;
+      }
+    }
   }
-  h4 a {
-    font-size: 18px;
-    color: #000000;
-    line-height: 26px;
+  .meta {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .stars {
+    display: flex;
+    color: #e5e5e5;
+
+    .icon-star-solid {
+      color: #faff00;
+    }
+  }
+  .last-updated {
+    font-size: 12px;
+    color: #808080;
+
+    i {
+      font-weight: 300;
+    }
   }
 }

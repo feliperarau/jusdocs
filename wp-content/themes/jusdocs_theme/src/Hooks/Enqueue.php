@@ -9,6 +9,7 @@ namespace Theme\Hooks;
 
 use SolidPress\Core\Hook;
 use Theme\Helpers\User;
+use Theme\Helpers\Utils;
 
 /**
  * Enqueue assets for current template
@@ -21,6 +22,7 @@ class Enqueue extends Hook {
 	public function __construct() {
 		$this->add_action( 'admin_enqueue_scripts', 'admin_assets' );
         $this->add_action( 'wp_enqueue_scripts', 'enqueue_template_scripts' );
+		$this->add_action( 'amp_post_template_head', 'amp_styles' );
 	}
 
 	/**
@@ -107,26 +109,6 @@ class Enqueue extends Hook {
             true
 		);
 
-		/**
-		 * Jusdocs Localization Object
-		 */
-		wp_localize_script(
-            'jusdocs-scripts',
-            'jusdocs',
-            array(
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
-            )
-		);
-
-		wp_localize_script(
-            'jusdocs-scripts',
-            'jusdocsComponentsData',
-            array(
-				'url'   => admin_url( 'admin-ajax.php' ),
-				'nonce' => wp_create_nonce( 'dynamic_components_nonce' ),
-            )
-        );
-
 		wp_enqueue_script( 'jusdocs-scripts' );
 
 		if ( ! is_admin() && is_singular() && comments_open() ) {
@@ -188,5 +170,24 @@ class Enqueue extends Hook {
 
 		// Return template name, providing filter hook to add or modify rules
 		return apply_filters( 'jusdocs_template_name', $template_name );
+	}
+
+	/**
+	 * Enqueue CSS files for AMP
+	 *
+	 * @return void
+	 */
+	public function amp_styles() : void {
+		$dir       = get_stylesheet_directory_uri() . '/dist/';
+		$file_name = 'amp.css';
+		$path      = $dir . $file_name;
+
+		// phpcs:disable
+		$style = <<<HTML
+			<link href="$path" rel="stylesheet" type="text/css">
+		HTML;
+		// phpcs:enable
+
+		echo $style;
 	}
 }

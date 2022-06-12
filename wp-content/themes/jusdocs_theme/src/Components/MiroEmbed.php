@@ -26,12 +26,15 @@ class MiroEmbed extends Component {
      * @var array
      */
 	public $props = [
-		'class'        => '',
-		'board_id'     => '',
-		'show_button'  => true,
-		'button_label' => '',
-		'autoplay'     => true,
-		'base_link'    => 'https://miro.com/app/live-embed/',
+		'class'                 => '',
+		'board'                 => '',
+		'show_button'           => true,
+		'button_label'          => '',
+		'autoplay'              => true,
+		'presentation'          => true,
+		'live_endpoint'         => 'https://miro.com/app/live-embed/',
+		'presentation_endpoint' => 'https://miro.com/app/embed/',
+		'frame'                 => '',
 	];
 
 	/**
@@ -40,11 +43,20 @@ class MiroEmbed extends Component {
 	 * @return array
 	 */
 	public function get_props(): array {
-        $src = $this->props['base_link'] . $this->props['board_id'];
+		if ( $this->props['presentation'] ) {
+			$endpoint = $this->props['presentation_endpoint'];
+		} else {
+			$endpoint = $this->props['live_endpoint'];
+		}
+
+        $src = $endpoint . $this->props['board'] . '/';
 
         $src = add_query_arg(
             array(
 				'embedAutoplay' => $this->props['autoplay'] ? 'true' : 'false',
+				'autoplay'      => $this->props['presentation'] ? 'yep' : '',
+				'pres'          => $this->props['presentation'] ? '1' : '0',
+				'frameId'       => $this->props['frame'],
             ),
             $src
         );

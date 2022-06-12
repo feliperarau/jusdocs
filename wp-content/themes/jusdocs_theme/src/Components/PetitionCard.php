@@ -90,7 +90,7 @@ class PetitionCard extends Component {
 			'date'          => $date,
 			'slug'          => $petition->slug ?? '',
 			'title'         => $petition->title ?? '',
-			'area'          => $petition->title ?? '',
+			'area'          => $petition->area ?? '',
 			'petition_type' => $petition->type->name ?? '',
 		];
 	}
